@@ -96,7 +96,7 @@ class PlaylistGenerator(object):
                     item['url'] = re.sub('^([0-9]+)$', lambda match: 'http://' + hostport + path + '/channels/play?id=' + match.group(0),
                                             url, flags=re.MULTILINE)
                 if url == item['url']:  # For channel names
-                    item['url'] = re.sub('^([^/]+)$', lambda match: 'http://' + hostport + path + '/' + match.group(0),
+                    item['url'] = re.sub('^([^/]+)$', lambda match: 'http://' + hostport + path + '/' + match.group(0) + '/stream.mp4',
                                             url, flags=re.MULTILINE)
             
             if fmt:
