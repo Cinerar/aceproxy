@@ -65,7 +65,7 @@ class Torrenttv(AceProxyPlugin):
 
                 if (url.startswith('acestream://')) or (url.startswith('http://') and url.endswith('.acelive')):
                     self.channels[name] = url
-                    itemdict['url'] = urllib2.quote(encname, '') + 'test12.mp4'
+                    itemdict['url'] = urllib2.quote(encname, '') + urllib2.quote('/') + 'stream.mp4'
 
                 self.playlist.addItem(itemdict)
                 m.update(encname)
